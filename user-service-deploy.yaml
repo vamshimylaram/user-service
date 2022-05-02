@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: user-service
+  template:
+    metadata:
+      labels:
+        app: user-service
+    spec:
+      containers:
+        - name: user-service
+          image: "761590636927.dkr.ecr.us-west-2.amazonaws.com/eig-13/user-service:1.0.0-SNAPSHOT"
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 8080

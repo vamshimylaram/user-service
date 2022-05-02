@@ -1,0 +1,16 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+  xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro liquibase-pro-4.0.xsd http://www.liquibase.org/xml/ns/dbchangelog dbchangelog-4.0.xsd">
+
+  <include file="db/changelog/local/db.changelog-1.0-ddl.xml" />
+
+  <changeSet author="nathan.noble@sony.com" id="dml-1.0.1">
+    <insert tableName="user">
+      <column name="id" value="1" />
+      <column name="first_name" value="Nathan" />
+      <column name="last_name" value="Noble" />
+      <column name="email" value="nathan.noble@sony.com" />
+    </insert>
+  </changeSet>
+</databaseChangeLog>
